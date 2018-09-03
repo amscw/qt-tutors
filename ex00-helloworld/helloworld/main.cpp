@@ -10,7 +10,8 @@ int main(int argc, char *argv[])
 
     mysignal_c mysignal;
     myslot_c myslot;
-    QObject::connect(&mysignal, SIGNAL(doIt(const QString &)), &myslot, SLOT(DidIt(const QString &)));
+    bool bOk = QObject::connect(&mysignal, SIGNAL(doIt(const QString &)), &myslot, SLOT(DidIt(const QString &)));
+    Q_ASSERT(bOk);
     mysignal.sendSignal();
 
     return a.exec();

@@ -23,7 +23,7 @@ class myslot_c : public QObject
 public:
     virtual ~myslot_c(){}
 
-public slots:
+protected slots:
     void DidIt(const QString &str) const noexcept
     {
         qDebug() << "catch the doIt signal!";
