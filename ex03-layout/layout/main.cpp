@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
     QBoxLayout *pbxLayout = new QBoxLayout(QBoxLayout::LeftToRight);
     pbxLayout->addWidget(pcmdA, 1); // слабо тянучий
     pbxLayout->addWidget(pcmdB, 2); // средне тянучий
+    pbxLayout->addStretch(2);       // добавить фактор растяжения ("пружину")
     pbxLayout->addWidget(pcmdC, 3); // сильно тянучий
 
     // добовать компоновку
